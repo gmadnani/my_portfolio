@@ -1,0 +1,236 @@
+/* CSS variables for colour pallet declared in root of the page */
+:root {
+    --dark-blue: #1d3557;
+    --blue: #457b9d;
+    --light: #f0f8ff;
+    --light-blue: #8baac5;
+    --red: #e63946;
+    --white: white;
+    --black: black;
+  }
+  
+  /* General Styles */
+  body {
+    font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono",
+      "Courier New", Courier, monospace;    
+  }
+  
+  section {
+    padding: 1em 1em;
+    display: flex;
+  }
+  /* Navbar */
+  .flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--blue);
+  }
+  
+  /* Logo */
+  .logo {
+    font-family: Consolas, Monaco, "Lucida Console", "Liberation Mono",
+      "Courier New", Courier, monospace;
+    margin: 0.5em 0em 0.5em 0em;
+    color: greenyellow;
+    font-size: 130%;
+    text-transform: sentence;
+    background-color: var(--black);
+    padding: 0.5em;
+  }
+  
+  .logo::before {
+    content: "<h1> ";
+    color: greenyellow;
+  }
+  
+  .logo::after {
+    content: " </h1>";
+    color: greenyellow;
+  }
+  
+  .navigation {
+    display: flex;
+  }
+  
+  /* Nav links */
+  .navigation a {
+    display: block;
+    padding: 1em;
+    color: var(--white);
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 0.15em;
+  }
+  
+  /* Nav link colour on hover */
+  .navigation li:hover a {
+    color: var(--dark-blue);
+  }
+  
+  /* Hero Image */
+  .hero {
+    position: relative;
+    /* Removes unwanted space below image */
+    line-height: 0;
+  }
+  
+  /* Hero image full width */
+  .hero img {
+    max-width: 100%;
+  }
+  
+  /* Label over hero image */
+  .hero-label {
+    position: absolute;
+    bottom: 1.75em;
+    right: 1.5em;
+    padding: 0.75em;
+    background-color: var(--light);
+    color: var(--dark-blue);
+  }
+  
+  /* Hero label styling */
+  .hero-label h2 {
+    font-size: 120%;
+    text-transform: capitalize;
+    padding: 0.25em;
+  }
+  
+  /* Section heading styling */
+  .section-heading {
+    color: greenyellow;
+    border-right: var(--light) solid 2px;
+    font-size: 200%;
+    text-align: right;
+    padding: 0.5em;
+    min-width: 15%;
+  }
+  
+  /* Section content styling */
+  .section-content {
+    padding: 2em;
+    flex-grow: 3;
+  }
+  
+  /* About Section */
+  .about {
+    background-color: black;
+  }
+  
+  .about-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2em;
+    color: #f0f8ff;
+  }
+  
+  .about-info p {
+    padding: 0.5em;
+    flex: 0 0 75%;
+  }
+  
+  .about-info a {
+    color: var(--light);
+  }
+  
+  /* Links in the about section change color on hover */
+  .about-info a:hover {
+    color: var(--blue);
+  }
+  
+  /* Profile image */
+  .about-info img {
+    max-width: 20%;
+    flex: 0 0 25%;
+    padding-right: 0.5em;
+    border-radius: 50%;
+  }
+  
+  .work {
+    background-color: black;
+  }
+  
+  /* Work examples use flexbox and flex wrap */
+  .work-examples {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* First work example is larger than others */
+  .work-examples div:first-child {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .work-examples div {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .work-examples div img {
+    max-width: 100%;
+    padding: 0.5em;
+    opacity: 0.75;
+  }
+  
+  /* Opacity of images changes on hover */
+  .work-examples div img:hover {
+    opacity: 1;
+    /* Transition time */
+    transition: 1s;
+  }
+  
+  /* Image Text Overlay */
+  .example {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .example-label {
+    position: absolute;
+    bottom: 1.75em;
+    left: 0.5em;
+    padding: 0.75em;
+    text-transform: capitalize;
+    background-color: var(--white);
+    color: var(--dark-blue);
+  }
+  
+  .example-label h3 {
+    font-size: 120%;
+    padding-bottom: 0.25em;
+  }
+  
+  .example-label p {
+    font-size: 80%;
+  }
+  
+  /* Footer */
+  .contact {
+    color: var(--white);
+    background-color: var(--blue);
+  }
+  
+  .contact .section-heading {
+    color: var(--white);
+  }
+  
+  .contact-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2em;
+  }
+  
+  /* Footer link styling */
+  .contact-info a {
+    color: var(--white);
+    padding: 1em;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 0.15em;
+  }
+  
+  .contact-info a:hover {
+    color: var(--dark-blue);
+  }
